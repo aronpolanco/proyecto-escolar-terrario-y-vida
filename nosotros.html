@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros | Terrario & Vida</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* ESTILOS EXCLUSIVOS PARA PÁGINA NOSOTROS */
+        :root {
+            --spacing-xl: 80px;
+            --spacing-lg: 50px;
+            --spacing-md: 30px;
+        }
+
+        .page-nosotros {
+            padding-top: 100px;
+            background: linear-gradient(180deg, #f8fbd3 0%, #ffffff 100%); /* Degradado de fondo */
+            min-height: 100vh;
+        }
+
+        /* HERO MINIMALISTA */
+        .hero-minimal {
+            text-align: center;
+            padding: var(--spacing-xl) 0 var(--spacing-lg);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-minimal h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-minimal .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* CONTENIDO PRINCIPAL */
+        .content-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .content-block {
+            margin-bottom: var(--spacing-xl);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease forwards; /* Animación de aparición */
+        }
+
+        .content-block:nth-child(2) { animation-delay: 0.2s; }
+        .content-block:nth-child(3) { animation-delay: 0.4s; }
+        .content-block:nth-child(4) { animation-delay: 0.6s; }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* TÍTULOS ELEGANTES */
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-heading::after { /* Línea decorativa bajo el título */
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        /* TEXTO ELEGANTE */
+        .elegant-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 25px;
+        }
+
+        .highlight-text { /* Caja de texto destacada */
+            background: linear-gradient(120deg, rgba(45, 74, 34, 0.1) 0%, rgba(45, 74, 34, 0.05) 100%);
+            padding: var(--spacing-md);
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary-color); /* Borde lateral decorativo */
+            font-style: italic;
+            margin: var(--spacing-md) 0;
+        }
+
+        /* VALORES EN GRID */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grid responsivo */
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .value-card {
+            text-align: center;
+            padding: var(--spacing-md);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), #3a6b2a);
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .value-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .value-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* CTA ELEGANTE */
+        .cta-elegant {
+            text-align: center;
+            padding: var(--spacing-xl) 0;
+            border-top: 1px solid #eee; /* Línea separadora sutil */
+            margin-top: var(--spacing-xl);
+        }
+
+        .cta-elegant h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .btn-elegant {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--secondary-color);
+            border: 2px solid var(--secondary-color); /* Botón con borde */
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-elegant:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* IMAGEN MINIMALISTA */
+        .minimal-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
+                        url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            margin: var(--spacing-lg) 0;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero-minimal h1 {
+                font-size: 2.5rem;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr; /* Una columna en móviles */
+            }
+            
+            .minimal-image {
+                height: 250px;
+            }
+            
+            .section-heading {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-minimal h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-minimal .subtitle {
+                font-size: 1rem;
+            }
+            
+            .elegant-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Terrario<span>&Vida</span></a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="nosotros.html" class="active">Nosotros</a></li> <!-- Enlace activo con clase .active -->
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="index.html#contacto" class="btn-nav">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-nosotros">
+        <!-- HERO MINIMALISTA -->
+        <section class="hero-minimal">
+            <div class="container">
+                <h1>Sobre Nosotros</h1>
+                <p class="subtitle">Conectando naturaleza y diseño en cada espacio</p>
+            </div>
+        </section>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="content-section">
+            <div class="container">
+                <!-- BLOQUE 1: Nuestra Historia -->
+                <div class="content-block">
+                    <h2 class="section-heading">Nuestra Historia</h2>
+                    <p class="elegant-text">
+                        Terrario & Vida nació en 2022 de la pasión compartida por la naturaleza y el diseño sostenible. 
+                        Lo que comenzó como un proyecto personal entre amigos, rápidamente evolucionó en un emprendimiento 
+                        dedicado a llevar la naturaleza a espacios urbanos de manera elegante y accesible.
+                    </p>
+                    
+                    <div class="minimal-image"></div> <!-- Imagen con fondo CSS -->
+                    
+                    <p class="elegant-text">
+                        Creemos que cada persona merece tener un pedazo de naturaleza en su hogar u oficina. 
+                        Nuestros terrarios no son solo decoración; son ecosistemas vivos que purifican el aire, 
+                        reducen el estrés y conectan a las personas con el mundo natural.
+                    </p>
+                </div>
+
+                <!-- BLOQUE 2: Nuestra Filosofía -->
+                <div class="content-block">
+                    <h2 class="section-heading">Nuestra Filosofía</h2>
+                    
+                    <div class="highlight-text"> <!-- Cita destacada -->
+                        "En un mundo cada vez más digital, creemos en la importancia de reconectar con lo orgánico 
+                        y tangible. Cada terrario que creamos es un recordatorio de la belleza simple de la naturaleza."
+                    </div>
+                    
+                    <p class="elegant-text">
+                        Trabajamos con materiales 100% naturales, priorizando especies nativas y técnicas sustentables. 
+                        Cada diseño es pensado no solo estéticamente, sino también en su funcionamiento como ecosistema 
+                        autosostenible.
+                    </p>
+                </div>
+
+                <!-- BLOQUE 3: Nuestros Valores -->
+                <div class="content-block">
+                    <h2 class="section-heading">Nuestros Valores</h2>
+                    
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h3>Sustentabilidad</h3>
+                            <p>Materiales eco-amigables y procesos que respetan el medio ambiente.</p>
+                        </div>
+                        
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h3>Calidad</h3>
+                            <p>Selección rigurosa de plantas y materiales para resultados duraderos.</p>
+                        </div>
+                        
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3>Innovación</h3>
+                            <p>Diseños únicos que combinan estética moderna con funcionalidad natural.</p>
+                        </div>
+                        
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Pasión</h3>
+                            <p>Cada proyecto es realizado con dedicación y amor por los detalles.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BLOQUE 4: El Equipo -->
+                <div class="content-block">
+                    <h2 class="section-heading">El Equipo</h2>
+                    <p class="elegant-text">
+                        Somos un equipo multidisciplinario de diseñadores, biólogos y artesanos locales. 
+                        Combinamos conocimientos científicos con sensibilidad artística para crear piezas 
+                        únicas que cuentan una historia.
+                    </p>
+                    
+                    <p class="elegant-text">
+                        Más que un negocio, somos una comunidad de amantes de la naturaleza que buscan 
+                        inspirar a otros a reconectarse con el mundo natural a través del diseño consciente.
+                    </p>
+                </div>
+
+                <!-- CTA FINAL -->
+                <div class="cta-elegant">
+                    <h3>¿Listo para llevar naturaleza a tu espacio?</h3>
+                    <a href="index.html#contacto" class="btn-elegant">
+                        <i class="fas fa-envelope"></i> Contáctanos
+                    </a>
+                    <br>
+                    <a href="index.html#servicios" class="btn-elegant" style="margin-top: 15px;">
+                        <i class="fas fa-briefcase"></i> Ver Servicios
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Terrario & Vida Cancún</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Animación suave para los content blocks al hacer scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => { /* Observer API para animación al aparecer */
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.content-block').forEach(block => {
+                observer.observe(block);
+            });
+        });
+    </script>
+</body>
+</html>

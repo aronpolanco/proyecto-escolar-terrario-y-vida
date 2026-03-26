@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talleres | Terrario & Vida</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Terrario<span>&Vida</span></a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="index.html#contacto" class="btn-nav">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section" style="margin-top: 100px;"> <!-- Margen superior para compensar el header fijo -->
+        <div class="container">
+            <h2 class="section-title">Próximos Talleres</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 1.1rem;">
+                Aprende a crear y mantener tus propios terrarios. Nuestros talleres son prácticos, 
+                divertidos y adecuados para todos los niveles.
+            </p>
+            
+            <div class="portfolio-grid"> <!-- Reutiliza el grid de tarjetas del estilo principal -->
+                <div class="card">
+                    <img src="img/taller1.jpeg" alt="Taller de cuidados de plantas">
+                    <div class="card-info">
+                        <h3>Taller de Cuidados Básicos</h3>
+                        <p class="date"><i class="far fa-calendar"></i> 26 de Marzo 2026</p>
+                        <p class="description">Aprende a cuidar tus plantas suculentas y cactáceas.</p>
+                        <p class="price">$250.00 MXN</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/taller2.jpeg" alt="Taller de creación de terrarios">
+                    <div class="card-info">
+                        <h3>Creación de Terrarios</h3>
+                        <p class="date"><i class="far fa-calendar"></i> 5 de Abril 2026</p>
+                        <p class="description">Crea tu primer terrario paso a paso. Incluye materiales.</p>
+                        <p class="price">$450.00 MXN</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/taller3.jpeg" alt="Taller de diseño avanzado">
+                    <div class="card-info">
+                        <h3>Diseño Avanzado</h3>
+                        <p class="date"><i class="far fa-calendar"></i> 20 de Abril 2026</p>
+                        <p class="description">Técnicas profesionales para diseños complejos.</p>
+                        <p class="price">$550.00 MXN</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-box" style="background: var(--light-gray); padding: 40px; border-radius: 15px; margin-top: 50px; text-align: center;">
+                <h3 style="color: var(--primary-color); margin-bottom: 20px;">¿Interesado en un taller privado?</h3>
+                <p style="margin-bottom: 25px;">Ofrecemos talleres personalizados para grupos, empresas o eventos especiales.</p>
+                <a href="index.html#contacto" class="btn-primary" style="text-decoration: none; display: inline-block;">
+                    <i class="fas fa-envelope"></i> Contáctanos
+                </a>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="index.html" class="btn-primary" style="text-decoration: none; display: inline-block; background: var(--primary-color);">
+                    <i class="fas fa-arrow-left"></i> Volver al inicio
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="current-year">2026</span> Terrario & Vida Cancún</p> <!-- Año dinámico con JS -->
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

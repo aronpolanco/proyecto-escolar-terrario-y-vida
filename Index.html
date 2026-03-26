@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace la web responsive en móviles -->
+    <title>Terrario & Vida | Inicio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Librería de iconos -->
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Terrario<span>&Vida</span></a>
+            <nav class="nav">
+              <ul class="nav-list">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li> <!-- Enlace a otra página -->
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#contacto" >Contacto</a></li>
+</ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero"> <!-- Sección principal con ID para navegación interna -->
+            <div class="hero-content">
+                <h1>NATURALEZA EN CANCÚN</h1>
+                <p>Diseños vivos para transformar tu espacio.</p>
+            </div>
+        </section>
+
+        <section id="servicios" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <div class="portfolio-grid"> <!-- Grid para mostrar tarjetas de servicios -->
+                    <a href="ejemplares.html" class="card-link">
+                        <div class="card">
+                            <img src="img/cover1.png" alt="Venta de ejemplares de plantas">
+                            <div class="card-info">
+                                <h3>Venta de Ejemplares</h3>
+                                <p>Ver Stock</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="terrarios.html" class="card-link">
+                        <div class="card">
+                            <img src="img/cover2.png" alt="Diseño de terrarios personalizados">
+                            <div class="card-info">
+                                <h3>Diseño de Terrarios</h3>
+                                <p>Ver Galería</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="talleres.html" class="card-link">
+                        <div class="card">
+                            <img src="img/cover3.png" alt="Talleres y eventos sobre terrarios">
+                            <div class="card-info">
+                                <h3>Talleres y Eventos</h3>
+                                <p>Ver Fechas</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section">
+            <div class="container">
+                <div class="contact-grid"> <!-- Grid de dos columnas para contacto -->
+                    <div class="contact-left">
+                        <div class="contact-header">
+                            <h2>Hablemos</h2>
+                            <div class="social-links">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                            </div>
+                        </div>
+                        <div class="contact-info">
+                            <p><i class="fas fa-map-marker-alt"></i> Cancún, Q. Roo</p>
+                            <p><i class="fas fa-envelope"></i> contacto@terrariovida.com</p>
+                            <p><i class="fas fa-phone"></i> (+52) 998 123 4567</p>
+                        </div>
+                    </div>
+
+                    <form id="miFormulario" class="contact-form"> <!-- Formulario con ID para JS -->
+                        <input id="nombre" name="nombre" type="text" placeholder="Nombre completo" required>
+                        <input id="email" name="email" type="email" placeholder="Correo electrónico" required>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                        <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Terrario & Vida Cancún.</p>
+    </footer>
+    
+    <script src="script.js"></script> <!-- Enlace al archivo JavaScript -->
+</body>
+</html>
